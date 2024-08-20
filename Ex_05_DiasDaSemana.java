@@ -25,11 +25,10 @@ public class Ex_05_DiasDaSemana {
                 }
 
                 System.out.println("Dia: " + diasDaSemana[dia]);
-
                 break;
+
             } catch (Exception e) {
                 System.out.println("Número inválido.");
-                continue;
             }
         }
     }

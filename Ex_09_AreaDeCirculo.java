@@ -6,11 +6,20 @@ deve ser informado pelo usuário e o resultado terá que ser arredondado.
  */
 
 public class Ex_09_AreaDeCirculo {
-    int raio;
+    double raio;
     double area;
     long areaArredondado;
 
+    //construtor para raio tipo int
     Ex_09_AreaDeCirculo(int r){
+        raio = r * 1.0;
+        area = CalculoArea();
+        areaArredondado = Math.round(area);
+        printArea();
+    }
+
+    //construtor para raio tipo flutuante
+    Ex_09_AreaDeCirculo(double r){
         raio = r;
         area = CalculoArea();
         areaArredondado = Math.round(area);

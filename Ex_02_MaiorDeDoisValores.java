@@ -18,7 +18,6 @@ public class Ex_02_MaiorDeDoisValores {
                 break;
             } catch(Exception e){
                 System.out.println("Insira um número válido.");
-                continue;
             }
         }
 
@@ -29,7 +28,6 @@ public class Ex_02_MaiorDeDoisValores {
                 break;
             } catch(Exception e){
                 System.out.println("Insira um número válido.");
-                continue;
             }
         }
 

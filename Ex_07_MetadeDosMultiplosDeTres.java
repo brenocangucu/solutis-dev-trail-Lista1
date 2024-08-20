@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Ex_07_MetadeDosMultiplosDeTres {
     public static void main(String[] args) {
-        ArrayList<Integer> numerosInt = new ArrayList<>();
-        ArrayList<Double> numerosDouble = new ArrayList<>();
+        ArrayList<Integer> numerosInt;
+        ArrayList<Double> numerosDouble;
 
         int numInicial = 1;
         int numFinal = 100;

@@ -16,7 +16,7 @@ public class Ex_06_PrintProdutoNumerosImpares {
         int produtoInt = produtoNumerosInteger(numerosImpares);
         float produtoFloat = produtoNumerosFloat(numerosImpares);
 
-        System.out.println("Numeros impares entre " + numInicial + " e " + numFinal + ":");
+        System.out.println("Numeros impares de " + numInicial + " a " + numFinal + ":");
         System.out.println(numerosImpares + "\n");
 
         System.out.println("Produto dos numeros impares, tipo int:");

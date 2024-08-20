@@ -9,19 +9,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex_03_NumerosPrimos {
-    public static void main( String args[] ){
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int numero;
 
         while(true){
             try{
-                System.out.println("Digite um número inteiro maior que 1:");
+                System.out.println("Digite um número inteiro:");
                 numero = Integer.parseInt(scanner.nextLine());
                 printNumerosPrimosAbaixo(numero);
                 break;
             } catch(Exception e){
                 System.out.println("Número inválido.");
-                continue;
             }
         }
 
@@ -34,14 +33,11 @@ public class Ex_03_NumerosPrimos {
 
     public static ArrayList<Integer> numerosPrimosAbaixo(int numero) throws Exception {
         if (numero < 2) {
-            throw new Exception();
+            return new ArrayList<>();
         }
 
         ArrayList<Integer> numerosPrimosAbaixo = new ArrayList<>();
 
-        if(numero == 2){
-            numerosPrimosAbaixo.add(2);
-        }
 
         for(int i = 2; i < numero; i++){
 
@@ -51,14 +47,9 @@ public class Ex_03_NumerosPrimos {
         }
 
         return numerosPrimosAbaixo;
-
     }
 
     public static boolean ePrimo(int numero){
-        if(numero == 2){
-            return true;
-        }
-
         boolean ePrimo = true;
 
         for(int i = 2; i < numero; i++){
@@ -69,7 +60,6 @@ public class Ex_03_NumerosPrimos {
         }
 
         return ePrimo;
-
     }
 }
 

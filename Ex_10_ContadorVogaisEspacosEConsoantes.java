@@ -38,28 +38,6 @@ public class Ex_10_ContadorVogaisEspacosEConsoantes {
         System.out.println(this);
     }
 
-    //conversao ArrayList<Character> para char[]
-    public char[] listaParaArrayChar(ArrayList<Character> listaChar){
-        char[] arrayChar = new char[listaChar.size()];
-
-        for(int i = 0; i < arrayChar.length; i++){
-            arrayChar[i] = listaChar.get(i);
-        }
-
-        return arrayChar;
-    }
-
-    //conversao char[] para ArrayList<Character>
-    public ArrayList<Character> arrayParaListaChar(char[] charArray){
-        ArrayList<Character> listaChar = new ArrayList<>();
-
-        for(int i = 0; i < charArray.length; i++){
-            listaChar.add(charArray[i]);
-        }
-
-        return listaChar;
-    }
-
     public void vogaisEspacosEConsoantes(){
         ArrayList<Character> vogais = new ArrayList<>();
         ArrayList<Character> espacos = new ArrayList<>();
@@ -118,6 +96,28 @@ public class Ex_10_ContadorVogaisEspacosEConsoantes {
         }
 
         return true;
+    }
+
+    //conversao ArrayList<Character> para char[]
+    public char[] listaParaArrayChar(ArrayList<Character> listaChar){
+        char[] arrayChar = new char[listaChar.size()];
+
+        for(int i = 0; i < arrayChar.length; i++){
+            arrayChar[i] = listaChar.get(i);
+        }
+
+        return arrayChar;
+    }
+
+    //conversao char[] para ArrayList<Character>
+    public ArrayList<Character> arrayParaListaChar(char[] charArray){
+        ArrayList<Character> listaChar = new ArrayList<>();
+
+        for(int i = 0; i < charArray.length; i++){
+            listaChar.add(charArray[i]);
+        }
+
+        return listaChar;
     }
 
     @Override

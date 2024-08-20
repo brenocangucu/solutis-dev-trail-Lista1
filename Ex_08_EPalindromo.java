@@ -13,7 +13,6 @@ public class Ex_08_EPalindromo {
     public Ex_08_EPalindromo(String palavra){
         this.palavra = palavra;
         printPalavra();
-
     }
 
     public void printPalavra(){
@@ -22,20 +21,16 @@ public class Ex_08_EPalindromo {
         } else {
             System.out.println(palavra + " não é palindromo.");
         }
-
     }
 
     public boolean EPalindromo(){
         StringBuilder palavraReversa = new StringBuilder();
 
-        int palavraLength = this.palavra.length();
-
-        for (int i = (palavraLength - 1); i >=0; --i) {
+        for (int i = (this.palavra.length() - 1); i >= 0; --i) {
             palavraReversa.append(palavra.charAt(i));
         }
 
         return palavra.equalsIgnoreCase(palavraReversa.toString());
-
     }
 
 }

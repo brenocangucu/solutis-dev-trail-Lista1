@@ -21,7 +21,6 @@ public class Ex_04_QuilometroParaMilha {
                 break;
             } catch (Exception e) {
                 System.out.println("Número inválido.");
-                continue;
             }
         }
 
