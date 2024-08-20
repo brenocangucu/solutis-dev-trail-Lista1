@@ -30,36 +30,56 @@ public class Ex_12_Motoristas {
 
         Scanner scanner = new Scanner(System.in);
 
-        while(true){
-            try{
+        while(true) {
+            kmDirigidos = -1;
+            String input = "";
+
+            while (kmDirigidos < 0) {
                 System.out.println("Tanque " + contador);
                 System.out.println("Digite o número de kM dirigidos: (enter finaliza)");
-
-                String input = scanner.nextLine();
-
-                if(input.equals("")){
-                    System.out.println("Total de quilometros rodados: " + totalKmDirigidos + "\nTotal de litros de gasolina consumidos: " + totalLitrosDeGasolinaConsumidos + "\n");
+                input = scanner.nextLine();
+                if (input.equals("")) {
                     break;
                 }
-                kmDirigidos = Integer.parseInt(input);
-
-                System.out.println("Digite a quantidade de litros de gasolina consumidos:");
-                litrosDeGasolinaConsumidos = Integer.parseInt(scanner.nextLine());
-
-                mediaKmLitro = kmDirigidos * 1.0 / litrosDeGasolinaConsumidos;
-
-                System.out.println("Tanque " + contador + ", consumo: " + mediaKmLitro +  "km/l");
-
-                totalKmDirigidos += kmDirigidos;
-                totalLitrosDeGasolinaConsumidos += litrosDeGasolinaConsumidos;
-
+                try {
+                    kmDirigidos = Integer.parseInt(input);
+                    if(kmDirigidos < 0) {
+                        throw new IllegalArgumentException();
+                    }
+                } catch(Exception e){
+                    System.out.println("Numero Inválido");
+                }
+            }
+            if(input.equals("")){
                 System.out.println("Total de quilometros rodados: " + totalKmDirigidos + "\nTotal de litros de gasolina consumidos: " + totalLitrosDeGasolinaConsumidos + "\n");
-
-                contador++;
-            } catch (Exception e) {
-                System.out.println("Número inválido");
+                break;
             }
 
+            litrosDeGasolinaConsumidos = -1;
+
+            while(litrosDeGasolinaConsumidos < 0){
+                System.out.println("Digite a quantidade de litros de gasolina consumidos:");
+                try{
+                    litrosDeGasolinaConsumidos = Integer.parseInt(scanner.nextLine());
+                    if(litrosDeGasolinaConsumidos < 0) {
+                        throw new IllegalArgumentException();
+                    }
+                } catch (Exception e) {
+                    System.out.println("Número Inválido");;
+                }
+            }
+
+            mediaKmLitro = kmDirigidos * 1.0 / litrosDeGasolinaConsumidos;
+
+            System.out.println("Tanque " + contador + ", consumo: " + mediaKmLitro +  "km/l");
+
+            totalKmDirigidos += kmDirigidos;
+            totalLitrosDeGasolinaConsumidos += litrosDeGasolinaConsumidos;
+
+            System.out.println("Total de quilometros rodados: " + totalKmDirigidos + "\nTotal de litros de gasolina consumidos: " + totalLitrosDeGasolinaConsumidos + "\n");
+
+            contador++;
         }
     }
 }
+
