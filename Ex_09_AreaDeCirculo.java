@@ -27,7 +27,7 @@ public class Ex_09_AreaDeCirculo {
     }
 
     public double CalculoArea(){
-        return Math.PI * raio;
+        return Math.PI * Math.pow(raio, 2);
     }
 
     public double getArea(){
