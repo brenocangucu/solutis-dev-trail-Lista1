@@ -40,7 +40,7 @@ public class Ex_11_PrintEmOrdemAlfabetica {
                 return palavra1 + "," + palavra2;
             }
 
-            if (palavra1.length() > palavra2.length()) {
+            if (palavra1.length() < palavra2.length()) {
                 return palavra2 + "," + palavra1;
             }
 
