@@ -39,6 +39,6 @@ public class Ex_09_AreaDeCirculo {
     }
 
     public void printArea(){
-        System.out.println("A = PI * " + raio + "\nA = " + area + "\nArredondando: " + areaArredondado);
+        System.out.println("A = PI * " + raio + "^2" +  "\nA = " + area + "\nArredondando: " + areaArredondado);
     }
 }
