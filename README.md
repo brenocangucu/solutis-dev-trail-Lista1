@@ -1,5 +1,7 @@
-# solutis-dev-trail-lista1
+Solutis Dev Trail - Etapa Nivelamento
 
-Códigos das Questões da Lista #1.
+Este respositório contém os conteúdos das Listas #0 , #1 e #3 da 2a Etapa do processo seletivo de estágio da Solutis 2024.
 
-O arquivo Main.Java consiste no teste de todas as questões.
+packages:
+
+Lista_0
