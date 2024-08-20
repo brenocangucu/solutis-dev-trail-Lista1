@@ -38,11 +38,15 @@ public class Ex_12_Motoristas {
                 System.out.println("Tanque " + contador);
                 System.out.println("Digite o número de kM dirigidos: (enter finaliza)");
                 input = scanner.nextLine();
+
+                //se for igual a enter, encerra o loop e encerra o programa na linha 58
                 if (input.equals("")) {
                     break;
                 }
                 try {
                     kmDirigidos = Integer.parseInt(input);
+
+                    //se for um número negativo, dá exceção
                     if(kmDirigidos < 0) {
                         throw new IllegalArgumentException();
                     }
@@ -50,6 +54,8 @@ public class Ex_12_Motoristas {
                     System.out.println("Numero Inválido");
                 }
             }
+
+            //se inserir enter, encerra o programa
             if(input.equals("")){
                 System.out.println("Total de quilometros rodados: " + totalKmDirigidos + "\nTotal de litros de gasolina consumidos: " + totalLitrosDeGasolinaConsumidos + "\n");
                 break;
@@ -59,8 +65,11 @@ public class Ex_12_Motoristas {
 
             while(litrosDeGasolinaConsumidos < 0){
                 System.out.println("Digite a quantidade de litros de gasolina consumidos:");
+
                 try{
                     litrosDeGasolinaConsumidos = Integer.parseInt(scanner.nextLine());
+
+                    //se for um número negativo, dá exceção
                     if(litrosDeGasolinaConsumidos < 0) {
                         throw new IllegalArgumentException();
                     }
@@ -71,11 +80,13 @@ public class Ex_12_Motoristas {
 
             mediaKmLitro = kmDirigidos * 1.0 / litrosDeGasolinaConsumidos;
 
+            //impressão média km/l
             System.out.println("Tanque " + contador + ", consumo: " + mediaKmLitro +  "km/l");
 
             totalKmDirigidos += kmDirigidos;
             totalLitrosDeGasolinaConsumidos += litrosDeGasolinaConsumidos;
 
+            //impressão do total de quilometros rodados e combustivel consumido
             System.out.println("Total de quilometros rodados: " + totalKmDirigidos + "\nTotal de litros de gasolina consumidos: " + totalLitrosDeGasolinaConsumidos + "\n");
 
             contador++;
